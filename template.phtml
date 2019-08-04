@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+<table>
+    <tr>
+        <td>Title <?= $this->sortLink('title'); ?></td>
+        <td>URL <?= $this->sortLink('url'); ?></td>
+        <td># Bedrooms <?= $this->sortLink('bedrooms'); ?></td>
+        <td>$ Cost <?= $this->sortLink('cost'); ?> </td>
+        <td>Location<?= $this->sortLink('location'); ?> </td>
+        <td>Picture</td>
+    </tr>    
+    <? foreach ($this->rows as $row) : ?>
+        <tr>
+        <td><?= $row['title']; ?></td>
+        <td><a href="<?= $row['url']; ?>">Link</a></td>
+        <td><?= $row['bedrooms']; ?></td>
+        <td><?= $row['cost']; ?></td>
+        <td><?= $row['location']; ?></td>
+        <td><img src="<?= $row['thumbnail']?>"/></td>
+    <? endforeach; ?>
+</table>
+
+</body>
+</html>
